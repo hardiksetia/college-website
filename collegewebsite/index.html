@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+
+        :root {
+            --blur: rgba(0, 0, 0, 0.7);
+            --hover: rgba(93, 193, 35, 0.829);
+            --btn: rgba(46, 88, 255, 0.76);
+            --btnhover: rgb(46, 88, 255);
+            --shadow: rgb(0, 0, 0, 0.7);
+            --pinky: #fff3f3;
+            --grey: rgb(50, 50, 50);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            font-size: 60px;
+        }
+
+        h2 {
+            font-size: 40px;
+            display: block;
+            color: var(--grey);
+        }
+
+
+
+        hr {
+
+            width: 60%;
+            margin: auto;
+            color: rgb(166, 176, 106);
+
+        }
+
+        /* <---------HEADER-----------> */
+        header {
+            min-height: 100vh;
+            width: 100%;
+            background: linear-gradient(var(--blur), var(--blur)), url(2.jpg) no-repeat center;
+            background-size: cover;
+            position: relative;
+            box-shadow: 0 0 5px 0 var(--shadow);
+        }
+
+        nav img {
+            width: 150px;
+        }
+
+        nav {
+            padding: 4% 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu {
+            flex: 1;
+            text-align: right;
+
+        }
+
+        .menu ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 2%;
+            position: relative;
+
+        }
+        .menu ul li .fas{
+           font-size: larger;
+            color: whitesmoke ;
+
+        }
+
+        .menu ul li a {
+            color: whitesmoke;
+            text-decoration: none;
+            font-family: 'futura', sans-serif;
+            font-size: larger;
+            letter-spacing: 2px;
+        }
+
+        .menu ul li a:hover {
+            background-color: var(--hover);
+            border-radius: 5px;
+            padding: 2px;
+            transition: 0.5s;
+        }
+
+        .content {
+            width: 90%;
+            color: whitesmoke;
+            text-align: center;
+            margin: auto;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .content p {
+            font-size: 12px;
+            margin: 0 0 4%;
+
+        }
+
+        .btn1 {
+            color: whitesmoke;
+            display: inline-block;
+            cursor: pointer;
+            background-color: var(--btn);
+            border: 1px solid whitesmoke;
+            border: 1px solid var(--btn);
+            border-radius: 5px;
+            padding: 1%;
+            position: relative;
+
+        }
+
+        .btn1:hover {
+            background-color: var(--btnhover);
+            transition: 0.3s;
+
+        }
+
+        @media screen and (max-width:700px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            .menu ul li {
+                display: block;
+            }
+        }
+
+        /* <---------COURSES-----------> */
+        .courses {
+            width: 80%;
+            margin: 20px auto 0;
+            text-align: center;
+            padding: 5% 0;
+            color: var(--grey);
+        }
+
+        .courses p {
+            font-size: 10px;
+            font-weight: normal;
+            margin: 10px 0;
+
+
+        }
+
+        .courses .row p {
+            font-size: 10px;
+            padding: 15px 0 0 0;
+            font-weight: normal;
+
+        }
+
+        .row {
+            margin: 5% 0 0 0;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .course-col {
+
+            flex-basis: 27%;
+            text-align: center;
+            background-color: var(--pinky);
+            margin: 5px 0;
+            border-radius: 10px;
+            padding: 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .course-col:hover {
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.5s;
+        }
+
+        @media screen and (max-width:700px) {
+            h2 {
+                font-size: 30px;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        /* <----------------CAMPUS----------------> */
+
+        .campus {
+            width: 80%;
+            margin: auto;
+            padding-top: 50px;
+            text-align: center;
+            color: var(--grey);
+
+        }
+
+        .campus-row {
+            margin: 5% 0 50px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .campus-col {
+            flex-basis: 30%;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+
+        }
+
+        .campus-col img {
+            width: 100%;
+            height: 100%;
+            display: block;
+
+        }
+
+        .layer {
+            /* background-color: rgba(240, 128, 128, 0.2); */
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .layer:hover {
+            background-color: rgba(240, 180, 128, 0.44);
+
+        }
+
+        .layer h3 {
+            color: whitesmoke;
+            font-size: 25px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            position: absolute;
+            bottom: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: 0.3s;
+
+        }
+
+        .layer:hover h3 {
+            opacity: 1;
+            bottom: 10%;
+        }
+
+        @media screen and (max-width:700px) {
+            .campus-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .campus-col {
+                width: 40vw;
+            }
+        }
+
+        /* <------------------------FACILITIES--------------------> */
+        .facilities {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            color: var(--grey);
+            padding-top: 50px;
+
+        }
+
+        .facilities h2 {
+            text-align: center;
+            display: block;
+        }
+
+        .facilities-row {
+            display: flex;
+            justify-content: space-around;
+            /* align-items: center; */
+            margin-top: 5%;
+        }
+
+        .facilities-col {
+            flex-basis: 31%;
+            border-radius: 20px;
+            margin-bottom: 4%;
+            /* overflow: hidden; */
+            text-align: center;
+
+        }
+
+        .facilities-col img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+
+        .facilities-col h3 {
+            overflow: hidden;
+            text-align: center;
+            margin-top: 10px;
+
+        }
+
+        .facilities-col img:hover {
+            transform: translate(2px);
+            transition: 0.2s ease-out;
+            box-shadow: 0 10px 10px 0 rgba(12, 19, 77, 0.831);
+        }
+
+
+        @media screen and (max-width:700px) {
+            .facilities-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .facilities-col {
+                width: 45vw;
+                margin: 1% 0 2%;
+                text-align: center;
+            }
+
+        }
+
+        /* ------------------REVIEWS------------------ */
+        .reviews {
+            width: 80%;
+            margin: auto;
+            padding-top: 2%;
+        }
+
+        .reviews-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 5% 0;
+        }
+
+        .reviews h2,
+        p {
+            text-align: center;
+            display: block;
+        }
+
+        .reviews-col {
+            flex-basis: 43%;
+            border-radius: 2 0px;
+            margin-bottom: 5%;
+            padding: 20px;
+            text-align: left;
+            background-color: var(--pinky);
+            display: flex;
+        }
+
+        .reviews-col img {
+            height: 50px;
+            border-radius: 50%;
+            margin-left: 5px;
+            margin-right: 40px;
+        }
+
+        .reviews-col p {
+            padding: 2px;
+            font-size: 12px;
+            text-align: left;
+
+        }
+
+        .reviews-col h3 {
+            margin-top: 20px;
+            text-align: left;
+        }
+        @media screen and (max-width:700px) {
+           
+            .reviews-col p {
+            padding: 1px;
+            font-size: 10px;
+        }
+        .reviews-col h3 {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        .reviews-row {
+            flex-direction: column;
+        }
+        .fas,.far{
+            font-size: 10px;
+        }
+        }
+        /* ------------------FEEDBACK------------------ */
+
+        .feedback{
+            width: 80%;
+            margin: 50px auto;
+            padding-bottom: 4%;
+            text-align: center;
+            background: linear-gradient(var(--blur), var(--blur)), url(2.jpg) no-repeat center;
+            background-size: cover;  
+        border-radius: 30px;
+        }
+        .feedback h2{
+
+            font-size: 50px;
+            padding: 8% 5% 5%;
+            /* margin-bottom: 40px; */
+            color: whitesmoke;
+
+        }
+        .feedback a{
+            text-decoration: none;
+            color: whitesmoke;
+            align-self: center;
+            margin-bottom: 2%;
+        }
+        @media(max-width:700px){
+            .feedback h2{
+                font-size: 30px;
+                margin-left: 5%;
+                margin-right: 5%;
+
+            }
+        }
+    /* ------------------FOOTER------------------ */
+
+        footer{
+            width: 100%;
+            margin-top: 50px ;
+            text-align: center;
+            color: var(--grey);
+        }
+        footer h4{
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        footer p{
+            font-size: 10px;
+            margin-bottom: 15px;
+            padding: 0 50px;
+        }
+        .icons{
+            font-size: 30px;
+            padding: 12px;
+            cursor: pointer;
+        }
+        .icons a{
+            color: var(--grey);
+            padding: 0 7px;
+        }
+    </style>
+<script src="https://kit.fontawesome.com/07ea69460b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <a href="index.html"> <img src="logo2.jpeg"></a>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html">COURSES</a></li>
+                    <li><a href="index.html">ABOUT</a></li>
+                    <li><a href="index.html">CONTACT</a></li>
+                    <li><i class="fas fa-search"></i></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content">
+            <h1>Deenbandhu University </h1>
+            <p>It was established in 2006 by an Act of the Government of Haryana, upgrading a 1986 established
+                college.<br>DCRUST is a state university located in Murthal, Sonipat, Haryana, India.</p>
+            <a href=""></a><button class="btn1">Click here to know more</button></a>
+        </div>
+    </header>
+
+    <section class="courses">
+        <h2>
+            COURSES WE OFFER!
+        </h2>
+        <p>It is a matter of pride and immense pleasure that destiny has given me the opportunity to join Deenbandhu
+            Chhotu Ram University of Science and Technology family as its head.<br> I take this opportunity to welcome
+            new students choosing this university for their higher education in various programmes</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>BEGINNER</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eveniet aspernatur, enim dolores, odio
+                    tempora earum ab nobis ullam, quia voluptatum quisquam fugiat!</p>
+            </div>
+            <div class="course-col">
+                <h3>INTERMEDIATE</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eveniet aspernatur, enim dolores, odio
+                    tempora earum ab nobis ullam, quia voluptatum quisquam fugiat!</p>
+            </div>
+            <div class="course-col">
+                <h3>ADVANCE</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eveniet aspernatur, enim dolores, odio
+                    tempora earum ab nobis ullam, quia voluptatum quisquam fugiat!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="course-col">
+                <h3>DIPLOMA</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eveniet aspernatur, enim dolores, odio
+                    tempora earum ab nobis ullam, quia voluptatum quisquam fugiat!</p>
+            </div>
+            <div class="course-col">
+                <h3>B.TECH/BCA</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eveniet aspernatur, enim dolores, odio
+                    tempora earum ab nobis ullam, quia voluptatum quisquam fugiat!</p>
+            </div>
+            <div class="course-col">
+                <h3>M.TECH/MCA</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eveniet aspernatur, enim dolores, odio
+                    tempora earum ab nobis ullam, quia voluptatum quisquam fugiat!</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <section class="campus">
+        <h2>OUR CAMPUS! </h2>
+        <div class="campus-row">
+            <div class="campus-col">
+                <img src="x.jpg">
+                <div class="layer">
+                    <h3>LIBRARY</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="y.jpg">
+                <div class="layer">
+                    <h3>MV-BLOCK</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="z.jpg">
+                <div class="layer">
+                    <h3>AUDITORIUM</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <section class="facilities">
+        <h2>Facilities We Provide!</h2>
+        <div class="facilities-row">
+            <div class="facilities-col">
+                <img src="c.jpg">
+                <div class="im">
+                    <h3>COLLEGE HOSTEL</h3>
+                </div>
+            </div>
+            <div class="facilities-col">
+                <img src="b.jpg">
+                <div class="im">
+                    <h3>CAFETERIA</h3>
+                </div>
+            </div>
+            <div class="facilities-col">
+                <img src="a.jpg">
+                <div class="im">
+                    <h3>UGC</h3>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+
+    <section class="reviews">
+        <h2>What our students say?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <div class="reviews-row">
+            <div class="reviews-col">
+                <img src="u1.jpg">
+                <div>
+
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero error recusandae totam sit molestiae
+                        dolore ratione, quis, enim, id voluptas nemo magni rerum.</p>
+                        <h3>Dani Polaski</h3>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+            </div>
+            <div class="reviews-col">
+                <img src="u2.jpg">
+                <div>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae nam impedit enim aut aperiam eius
+                        magnam, consequatur sint dicta eveniet delectus vero sapiente!</p>
+                        <h3>Mia Fernandez</h3>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+            </div>
+        </div>
+    </section>
+   <hr>
+  <section class="feedback">
+      <h2>Let us know, how can we help you?</h2>
+      <button class="btn1"><a href="" class="btn">CONTACT US</a></button>
+  </section>  
+  <hr>
+<footer>
+    <h4>About us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, <br>quidem eius in, molestiae, esse enim fuga repellat reiciendis consequuntur recusandae dolor maxime eveniet.</p>
+    <div class="icons">
+       <a href="https://facebook.com"> <i class="fab fa-facebook-square"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+       <a href="https://twitter.com"> <i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+        
+    </div>
+    <p>This website is made by hardik with <i class="fas fa-heart"></i></p>
+</footer>
+</body>
+
+</html>
